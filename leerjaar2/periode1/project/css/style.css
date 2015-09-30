@@ -1,0 +1,28 @@
+html body{
+	width: 100%;
+	height: 100%;
+}
+#wrapper{
+	width: 70%;
+	height: 100%;
+	margin-left: 15%;
+	background-color: red;
+	/*padding-left: 3%;*/
+}
+#menu ul li {
+	/*float: right;*/
+	/*margin-left: 3%;*/
+	margin-top: 1%;
+	padding: 2%;
+	border:1px solid;
+	/*height: 100%;*/
+	display: inline-table;
+
+} 
+#menu img {
+
+	padding: 2%;
+
+	height: 100%;
+	float: left;
+} 

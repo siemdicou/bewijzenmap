@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1441627074 source:/Users/siemdicou/Documents/bewijzenmap/leerjaar2/rd/BMI_calc_Siem/main.c
+	<stdio.h>
+	<stdlib.h>
+

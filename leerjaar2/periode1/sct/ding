@@ -1,0 +1,45 @@
+//siem  & dave
+// Pin 13 has a LED connected so we give it a name:
+int aantalLed = 8;
+int led = 6;
+
+
+// the setup routine runs once when you press reset:
+void setup()
+{
+	// initialize the digital pin as an output.
+	
+	for(int i=0; i<= aantalLed; i++ ){
+	pinMode(led+i, OUTPUT);
+	}
+
+
+}
+
+// the loop routine runs over and over again forever:
+//void loop()
+//{
+//	//Set the LED pin to HIGH. This gives power to the LED and turns it on
+//	digitalWrite(led1, HIGH);
+//	//Wait for a second
+//	delay(1000);
+//	//Set the LED pin to LOW. This turns it off
+//	digitalWrite(led1, LOW);
+//	//Wait for a second
+//	delay(1000);
+//}
+
+void loop()
+{
+   for (int i=0; i <= aantalLed; i++){
+	//Set the LED pin to HIGH. This gives power to the LED and turns it on
+	digitalWrite(led+i, HIGH);
+	//Wait for a second
+	delay(20);
+	//Set the LED pin to LOW. This turns it off
+	digitalWrite(led+i, LOW);
+	//Wait for a second
+	delay(20);
+
+   } 
+}

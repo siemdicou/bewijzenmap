@@ -1,0 +1,82 @@
+html body{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;	
+}
+#wrapper{
+	width: 70%;
+	height: 1100px;
+	margin-left: 15%;
+	background-color: red;
+	padding-top: 1%;
+	/*padding-left: 3%;*/
+}
+#menu ul li {
+	/*float: right;*/
+	/*margin-left: 3%;*/
+	margin: 1% 0%;
+	padding: 2%;
+	border:1px solid;
+	/*height: 100%;*/
+	display: inline-table;
+
+
+} 
+#menu img {
+
+	padding: 2%;
+
+	height: 100%;
+	float: left;
+	padding-right: 15%;
+} 
+#menu{
+	width: 100%;
+	background-color:red;
+	/*opacity: 0.7;*/
+		/*text-align: center;*/
+	padding: 0%;
+	margin: 0;
+}
+*{
+	margin: 0;
+}
+input[type=search] { 
+	/*color: red;  */	
+	text-align: right;
+	cursor: pointer;
+	display: inline-block; 
+	width: 10%; 	
+	margin-left: 15%;
+	/*padding-left: 15%;*/
+       
+	/*text-shadow: 0 0 2px black;       */
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+
+  /* Remove default */
+  -webkit-appearance: none;
+    
+  /* Now your own custom styles */
+  height: 15px;
+  width: 15px;
+  /*background: red;*/
+  /* Will place small red box on the right of input (positioning carries over) */
+
+}
+#imgtitle{
+	padding:0;
+	margin: -4px;	
+}
+#newsitem{
+	width: 24%;
+	margin: 2%;	
+	padding: 2%;
+	border:5px solid;
+	float: left;	
+}
+#newsitem img{
+	width: 100%;	
+}
