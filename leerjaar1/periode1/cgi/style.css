@@ -1,0 +1,110 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+html{
+
+	font-family:sans-serif;
+	background-image: url(background.jpg);
+	background-size:cover;
+	background-attachment: fixed;
+}
+#wrapper {
+	margin: 0 auto;
+	width: 75%;
+	height: 1500px;
+	background-color: rgba(255,255,255,0.6);
+}
+p{
+  padding: 5%;  
+}
+
+h1 {
+	text-align: center;
+	margin: 0;
+	position:center;
+	padding: 50px;
+	font-family: 'Droid Serif', serif;
+
+}
+.menu{
+  margin: 0px auto;
+  padding-left: 36%;
+  width: 70%;
+  padding-top: 3.5%;
+}
+
+.menu ul{
+  padding:1;
+  margin:1;
+  list-style:none;
+  margin: 0px auto;
+  background-color: white;
+}
+
+.menudavid ul{
+
+}
+
+.menu li{
+  float:left; 
+  position:relative;
+  padding-right:100; 
+  display:block; 
+  width: 20%;
+}
+
+.menu li ul {
+    display:none;
+}
+
+.menu li:hover ul{ 
+  display:block; 
+  background:#fff1ff;
+  height:auto; 
+  width:13em; 
+}
+
+.buttons{
+  transition: background-color 2s ease-out;
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px 0px 10px ;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.buttons:hover{
+  background-color: rgba(255,255,255,0.8);
+  color: rgba(0,0,0,0.8);
+}
+
+
+.menu li ul li{
+    clear:both;
+  border-style:none;
+}
+
+li{
+  text-align: left;
+  color: rgb(16,198,201);
+}
+
+a{
+  text-decoration: none;
+  color: rgb(7,226,230);
+}
+
+a:hover{
+  box-shadow: 100px, 100px, 100px #10C97F; 
+  color: black;
+}
+
+.banner{
+  background: url(./img/banner.png) no-repeat;
+  background-size: 100%;
+  height: 200px;
+  width: 100%;
+  margin: 0px auto;
+}
