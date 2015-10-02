@@ -1,28 +1,10 @@
 <?php 
-	include 'includes/config.php';
-	include 'includes/database.php';
+	require 'includes/config.php';
+	require 'includes/database.php';
+	require_once 'libs/smarty/Smarty.class.php';
+	require 'includes/bootstrap.php';
+
  ?>
-
-<!-- // // Gebruikersnaam, wachtwoord van de database etc ophalen
-// require 'includes/config.php' ;
-// // Laad de Smarty bibliotheek in
-// require_once 'libs/smarty/Smarty.class.php';
-// // Voer instellingen uit en stel template parser in
-// require 'includes/bootstrap.php' ;
-// // Maak de database connectie
-// require_once 'includes/database.php' ;
-
-// // Koppel de waarde van de paginatitel aan te smarty tag 'title'
-// $templateParser->assign('title', 'Me First And The Gimme Gimmes');
-// // Toon de template: output html
-// $templateParser->display('head.tpl');
-
-// // Haal de nieuws artikelen op
-// require 'logic/select_newsarticles.php';
-// // Toon de nieuwsberichten. Oude stijl:
-// // Bouw dit om naar een template systeem
-
-// include 'views/newsarticles.php' ; -->
 
 <!DOCTYPE html>
 <html>
@@ -41,26 +23,41 @@ $page = (empty($_GET['page'])) ? '' : $_GET['page'];
 	<?php 
  switch ($page) {
  	case 'home':
- 		// include 'index.php';
+ 		// include 'home.php';
  	break;
   	
   	case 'events':
  		include 'views/events.tpl';
  	break;
+
+ 	case 'search':
+
+ 		$search_string = isset($_POST['search_string']) ? $_POST['search_string']:"";
+
+ 		// search db for search
+ 		// require 'logic/script.js';
+ 		require 'logic/search_articles.php';
+ 		$templateParser->assign('data', $search_result);
+ 		$templateParser->display('search_result.tpl');
+
+ 		break;
  
   	case 'concerten':
- 		include 'views/concerten.php';
+ 		$templateParser->display ('concerten.tpl');
  	break;	
   	
   	case 'news':
-  		// $page_nr = isset($_GET['page_nr']) ? $_GET['page_nr']: 1;
+  		$page_nr = isset($_GET['page_nr']) ? $_GET['page_nr']: 1;
   		// echo "$page_nr";
- 		include 'views/newsarticles.php';
+  		require 'logic/select_newsarticles.php';
+ 		$templateParser->assign('data', $result);
+ 		$templateParser->display('newsarticles.tpl');
+
  	break;				
  	
  	default:
- 		# code...
- 	break;
+		$templateParser->display('home.tpl');
+	 break;
  }
 
 	// $templateParser->display('views/header.tpl');

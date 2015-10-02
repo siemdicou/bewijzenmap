@@ -1,13 +1,13 @@
-<?php
+
 
 // {include file="navigation.tpl"};
-	echo '<section>';
-// $nr_items_page = 5;
-// $ofset = ($page_nr-1) * $nr_items_page;
+// {include file="search.tpl"};
+	echo ';
+
+// 
+// 
 
 
-$sql = "SELECT * FROM newsItem"; // limit" .$ofset ." , ". $nr_items_page
-$result = $mysqli->query("$sql");
 
 while ($newsItem = $result->fetch_assoc()) {
 	echo '<div id="newsitem">';
@@ -19,6 +19,14 @@ while ($newsItem = $result->fetch_assoc()) {
 	echo '</article>';
 	echo "</div>";
 }
+echo '';
 
-
-echo '</section>';
+	<section>
+	<div id="newsitem">
+	<article>
+	<h1>{$newsItem.id}{$newsItem.title}</h1><br>
+	<img src='{$newsItem.image}'><br><br>
+	<content>{$newsItem.content}</content><br><br>
+	</article>
+	</div>
+	</section>

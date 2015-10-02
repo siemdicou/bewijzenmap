@@ -15,4 +15,6 @@ define('DB_NAME','linkinpark');
 define('DB_USERNAME','root');
 define('DB_PASSWORD','');
 
+define('PAGENUMBER',9)
+
 ?>

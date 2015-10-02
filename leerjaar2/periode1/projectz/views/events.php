@@ -1,1 +1,0 @@
-<img src="http://www.di.be/fb_di_default.png">

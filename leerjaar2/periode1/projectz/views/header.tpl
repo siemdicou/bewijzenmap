@@ -13,7 +13,10 @@
 <!-- 		<a href="?page=home"><li>newsfeed</li></a>
 		<a href="?page=home"><li>newsfeed</li></a>
 		<a href="?page=home"><li>newsfeed</li></a> -->
-		<input type="search" placeholder="search" results="5">
+		<form action="?page=search" method="POST">
+	<input type="text" name="search_string">
+	<input type="submit" value="search">
+</form>
 
 
 	</ul>
