@@ -18,6 +18,7 @@
 <?php 
 $page = (empty($_GET['page'])) ? '' : $_GET['page'];
 	include 'views/header.tpl';
+$templateParser->assign('curr_page',$page);
 	?>
 	<div id="wrapper">
 	<?php 
