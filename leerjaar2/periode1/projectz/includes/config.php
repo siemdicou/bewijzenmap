@@ -10,17 +10,21 @@ define('PROJECT_STATUS','development');
 setlocale(LC_ALL, 'nl_NL');
 
 // databasegegevens
+// define('DB_HOST','127.0.0.1');
+// define('DB_NAME','linkinpark');
+// define('DB_USERNAME','root');
+// define('DB_PASSWORD','');
+
+
+// databasegegevens online
 define('DB_HOST','127.0.0.1');
-define('DB_NAME','linkinpark');
-define('DB_USERNAME','root');
-define('DB_PASSWORD','');
+define('DB_NAME','18363_myband');
+define('DB_USERNAME','18363');
+define('DB_PASSWORD','ddypjcrh');
 
 define('PAGENUMBER',6)
 
-// databasegegevens
-// define('DB_HOST','127.0.0.1');
-// define('DB_NAME','18363_myband');
-// define('DB_USERNAME','18363');
-// define('DB_PASSWORD','ddypjcrh');
+
+
 
 ?>

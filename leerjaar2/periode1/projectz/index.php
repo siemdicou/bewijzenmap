@@ -3,6 +3,7 @@
 	require 'includes/database.php';
 	require_once 'libs/smarty/Smarty.class.php';
 	require 'includes/bootstrap.php';
+	include 'logic/functions.php';
 
  ?>
 
