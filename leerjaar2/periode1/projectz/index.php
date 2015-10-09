@@ -17,24 +17,32 @@
 
 <?php 
 $page = (empty($_GET['page'])) ? '' : $_GET['page'];
-	include 'views/header.tpl';
 $templateParser->assign('curr_page',$page);
+$templateParser->display('header.tpl');
+
 	?>
 	<div id="wrapper">
 	<?php 
  switch ($page) {
  	case 'home':
- 		// include 'home.php';
+ 		$templateParser->display ('home.tpl');
  	break;
   	
   	case 'events':
- 		include 'views/events.tpl';
+  		require 'logic/select_events.php';
+  		$templateParser->assign('data', $result);
+ 		$templateParser->display ('events.tpl');
+ 	break;
+
+  	case 'cd':
+  		require 'logic/select_cds.php';
+  		$templateParser->assign('data', $result);
+ 		$templateParser->display ('cds.tpl');
  	break;
 
  	case 'search':
 
  		$search_string = isset($_POST['search_string']) ? $_POST['search_string']:"";
-
  		// search db for search
  		// require 'logic/script.js';
  		require 'logic/search_articles.php';
@@ -44,6 +52,8 @@ $templateParser->assign('curr_page',$page);
  		break;
  
   	case 'concerten':
+  	  		require 'logic/select_events.php';
+  		$templateParser->assign('data', $result);
  		$templateParser->display ('concerten.tpl');
  	break;	
   	
@@ -51,6 +61,7 @@ $templateParser->assign('curr_page',$page);
   		$page_nr = isset($_GET['page_nr']) ? $_GET['page_nr']: 1;
   		// echo "$page_nr";
   		require 'logic/select_newsarticles.php';
+  		// require 'file';
  		$templateParser->assign('data', $result);
  		$templateParser->display('newsarticles.tpl');
 

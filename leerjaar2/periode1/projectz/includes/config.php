@@ -17,4 +17,10 @@ define('DB_PASSWORD','');
 
 define('PAGENUMBER',6)
 
+// databasegegevens
+// define('DB_HOST','127.0.0.1');
+// define('DB_NAME','18363_myband');
+// define('DB_USERNAME','18363');
+// define('DB_PASSWORD','ddypjcrh');
+
 ?>

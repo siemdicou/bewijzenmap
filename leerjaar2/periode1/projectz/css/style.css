@@ -3,13 +3,18 @@ html body{
 	height: 100%;
 	padding: 0;
 	margin: 0;	
+		background-image: url("../img/background.jpg");
+
+		background-size:cover; 
 }
 #wrapper{
 	width: 70%;
 	height: 1100px;
 	margin-left: 15%;
-	background-color: red;
+	background-color: #ffffff;
+	opacity: 0.7;
 	padding-top: 1%;
+
 	/*padding-left: 3%;*/
 }
 #menu ul li {
@@ -20,9 +25,16 @@ html body{
 	border:1px solid;
 	/*height: 100%;*/
 	display: inline-table;
+	color: black;
+	opacity: 0.7;	
+	text-decoration: none;
 
 
 } 
+ .selected  {
+	background-color: #B5FFF7;
+	opacity: 1.0;
+}
 #menu img {
 
 	padding: 2%;
@@ -33,11 +45,12 @@ html body{
 } 
 #menu{
 	width: 100%;
-	background-color:red;
-	/*opacity: 0.7;*/
-		/*text-align: center;*/
+		background-color: #ffffff;
+	opacity: 0.7;	
+
 	padding: 0%;
 	margin: 0;
+	color: black;
 }
 *{
 	margin: 0;
@@ -55,20 +68,21 @@ input[type=text] {
        
 	/*text-shadow: 0 0 2px black;       */
 }
-
-input[type="search"]::-webkit-search-cancel-button {
-
-  /* Remove default */
-  -webkit-appearance: none;
-    
-  /* Now your own custom styles */
-  height: 15px;
-
-  width: 15px;
-  /*background: red;*/
-  /* Will place small red box on the right of input (positioning carries over) */
-
+input[type=text] { 
+	/*color: red;  */	
+	text-align: left;
+	cursor: pointer;
+	display: inline-block; 
+	color: white;
+	margin-left: 10%;
+	/*float: right;*/
+	/*padding-left: 15%;*/
+	
+       
+	/*text-shadow: 0 0 2px black;       */
 }
+
+
 #imgtitle{
 	padding:0;
 	margin: -4px;	
@@ -82,4 +96,33 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 #newsitem img{
 	width: 100%;	
+}
+
+#events{
+	width: 90%;
+	margin: 2%;	
+	padding: 2%;
+	border:5px solid;
+	float: left;	
+}
+#events h3{
+	width: 90%;
+ 	/*margin-left: 25%;*/
+ 	text-decoration: none;
+ 	text-align: right;
+ }
+#events img{
+	height: 200px;	
+	/*text-decoration: none;*/
+}
+.pagination ul ul a{
+	display: inline-table;
+	/*text-decoration: none;*/
+	float: left;
+	border: 1px solid;
+	padding: 1%;
+}
+#home{
+	text-align: center;
+	padding: 2%;
 }
