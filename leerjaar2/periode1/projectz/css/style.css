@@ -122,7 +122,15 @@ input[type=text] {
 	border: 1px solid;
 	padding: 1%;
 }
+.pagination{
+	width: 100%;
+	margin-top: 5px;
+	text-align: center;
+}
 #home{
 	text-align: center;
 	padding: 2%;
+}
+#newslist{
+	margin-bottom: 2%;
 }
