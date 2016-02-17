@@ -1,0 +1,88 @@
+@mixin border-side-radius($radius, $side: top) {
+    $topleft: 0;
+    $topright: 0;
+    $bottomright: 0;
+    $bottomleft: 0;
+    @if $side == left { $topleft: $radius; $bottomleft: $radius; }
+    @else if $side == right { $topright: $radius; $bottomright: $radius }
+    @else if $side == top { $topleft: $radius; $topright: $radius }
+    @else if $side == bottom { $bottomleft: $radius; $bottomright: $radius }
+    border-radius: $topleft $topright $bottomright $bottomleft;
+}
+//@mixin shadow($color: $transparentblack) {
+//    box-shadow: 10px 5px 5px $color;
+//}
+@mixin center-horizontal($width) {
+    width: $width;
+    margin-right: -$width/2;
+    right: 50%;
+    position: absolute;
+}
+@mixin center-all($width, $height) {
+    width: $width;
+    margin: -($height/2) 0 0 (-$width/2);
+    height: $height;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+@mixin unselectable() {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@mixin selectable() {
+    cursor: auto;
+    -webkit-touch-callout: auto;
+    -webkit-user-select: auto;
+    -khtml-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
+@mixin mirror() {
+    transform: scale(-1, 1);
+}
+@mixin defaultFont($size: 12) {
+    font-family: 'Roboto', sans-serif;;
+    font-weight: normal;
+    font-size: $size+px;
+    color: #827a68;
+}
+@mixin narrowFont($size: 12) {
+    font-family: 'Roboto', sans-serif;;
+    font-weight: 300;
+    font-size: $size+px;
+    color: #827a68;
+}
+@mixin headerFont($size: 14) {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $size+px;
+    color: #827a68;
+}
+
+@mixin box-shadow($opacity: 0.07, $distance: 2px) {
+    $color: rgba(0, 0, 0, $opacity);
+    box-shadow: $distance $distance 6px 1px $color;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; } /* IE < 8 */
+
+@mixin calc($property, $expression) {
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}

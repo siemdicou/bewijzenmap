@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rectangle</title>
+    <link rel="stylesheet" href="include/style.css">
+     <meta name="author" content="Mediacollege Amsterdam">
+  </head>
+  <body>
+    <header><h3>Rectangles<h3>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <script src="include/utils.js"></script>
+    <script src="classes/rectangle.js"></script>
+    <script>
+     var angularSpeed = 0.001;
+     var yellow = "#FFFF00";
+     var blue = "#00FF00";
+     var width = 50;
+     var height = 50;
+     var afstand = 5;
+     var aantalX = Math.round(canvas.width/(width + afstand));
+     var aantalY = Math.round(canvas.width/(width + afstand));
+     var rectangle = new Array(aantalX)
+     var rotation = 0;
+     var direction = 1;
+     for (i = 0; i <= aantalX; i = i +1){ //javascript wil dat de 2D array van te voren wordt aangemaakt
+          rectangle[i] = new Array();
+          }
+     for (i = 0; i <= aantalX; i = i +1){ // maak de rechthoeken
+          for (j = 0; j <= aantalY; j = j +1){
+                rectangle[i][j] = new Rectangle();//instance
+                rectangle[i][j].x = i*(width + afstand);
+                rectangle[i][j].y = j*(height + afstand);
+                rectangle[i][j].rectWidth = width;
+                rectangle[i][j].rectHeight = height;
+                rectangle[i][j].colorFill = "#000000";
+                rectangle[i][j].colorLine = "#000000";
+          }}
+ 
+    window.onload = function () {
+          var canvas = document.getElementById('canvas'),
+          context = canvas.getContext('2d');
+          mouse = utils.captureMouse(canvas);
+         
+          (function drawFrame () {
+                window.requestAnimationFrame(drawFrame, canvas);
+                context.clearRect(0, 0, canvas.width, canvas.height); // ververs scherm
+                for (i = 0; i <= aantalX; i = i +1){     
+                     if (Math.abs(rotation) > Math.PI/11){
+                     angularSpeed = -angularSpeed;
+                     //direction = -direction;
+                     console.log("turn");
+                     }
+                     rotation += angularSpeed;
+                     for (j = 0; j <= aantalY; j = j +1){
+                          rectangle[i][j].rotation = rotation * direction ;
+                          rectangle[i][j].draw(context);
+                          // rectangle[i][j].colorFill += letters[Math.floor(Math.random() * 16)];
+                          //context.fillText( i + ""  + j, rectangle[i][j].x, rectangle[i][j].y);// laat nummer zien
+                     direction = -direction;
+                }
+                     //direction = -direction;
+                }        
+               
+               
+          }());
+    };
+     </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+html body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+
+ul {
+  width: 100%;
+  margin: 0%;
+  padding: 0px;
+  background-color: #ff9d00; }
+  ul a {
+    color: black; }
+  ul li {
+    display: inline-block;
+    padding: 1% 1%; }
+    ul li img {
+      display: inline-block; }
+    ul li p {
+      display: i; }
+    ul li ul {
+      display: none; }
+
+footer {
+  width: 100%;
+  background-color: #ff9d00; }
+
+#wrapper {
+  background-color: red;
+  width: 100%; }
+  #wrapper .text {
+    width: 50%;
+    display: inline-block;
+    background-color: blue;
+    margin: 0% 0% 0% 13%; }
+    #wrapper .text h1 {
+      padding: 0px;
+      margin: 0px;
+      text-align: center; }
+  #wrapper .widget {
+    width: 20%;
+    display: inline-block;
+    background-color: blue;
+    float: right;
+    margin: 0% 7% 0% 0%; }
+    #wrapper .widget .search {
+      border: solid 2px;
+      padding: 10px; }
+
+header {
+  height: 200px;
+  width: 100%;
+  background-image: url(http://wallpaper4me.com/images/wallpapers/panorammountainlake-447435.jpeg);
+  background-size: cover;
+  background-position: center; }
+  header p {
+    margin: 1% 20%;
+    text-align: center;
+    color: #ffffff; }
+  header h1 {
+    text-align: center;
+    margin: 0%; }
+
+/*# sourceMappingURL=style.css.map */

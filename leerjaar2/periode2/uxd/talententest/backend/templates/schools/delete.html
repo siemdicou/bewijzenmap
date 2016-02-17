@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>scholen <small>school verwijderen</small></h1>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-dashboard"></i> scholen</li>
+                <li class="active"><i class="fa fa-dashboard"></i> Verwijderen</li>
+            </ol>
+        </div>
+
+        <div class="col-lg-12">
+
+            {% if request_method == 'POST' %}
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                <h3 class="panel-title">school verwijderd!</h3>
+                </div>
+                <div class="panel-body">
+                    school: '{{school.name}}' succesvol verwijderd!
+                </div>
+            </div>
+
+            <a href="{{ urlFor('schools_overview') }}" class="btn btn-primary">
+                  <i class="fa fa-arrow-left"></i> Terug
+            </a>
+            {%endif%}
+
+            {% if request_method == 'GET' %}
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                <h3 class="panel-title">school '{{school.name}}' verwijderen</h3>
+                </div>
+                <div class="panel-body">
+                  Weet u zeker dat u het school: '<b>{{school.name}}</b>' wilt verwijderen?
+                </div>
+            </div>
+
+            <form method="POST" action="{{ urlFor('schools_delete', {"id": school.id}) }}">
+              <a href="{{ urlFor('schools_overview') }}" class="btn btn-primary">
+                  <i class="fa fa-arrow-left"></i> Nee, terug
+              </a>
+              <button type="submit" class="btn btn-danger">
+                  <i class="fa fa-trash-o"></i> Ja
+              </button>
+            </form>
+            {%endif%}
+
+        </div>
+    </div>
+{%endblock%}

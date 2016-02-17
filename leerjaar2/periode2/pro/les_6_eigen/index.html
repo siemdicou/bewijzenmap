@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MD2 CSS transitions + Sass</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/default.css">
+  </head>
+  <body>
+
+  <div class="notification-bar animatedCSS">
+    Dit is een notification balk
+  </div>
+
+  <!-- barcode scanner. Zou ook in een 'view' mogen -->
+  <div id="reader">
+  </div>
+
+  <!-- container waar kunst in wordt weergegeven -->
+  <div id="artwork-container"></div>
+
+  <!-- templates -->
+  <script id="artwork-template" type="text/x-handlebars-template">
+    <div class="artwork animatedCSS">
+      <div><img src="{{url}}"></div>
+      <div class="title">Kunstwerk: {{title}}</div>
+      <div>{{description}}</div>
+    </div>
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+  <script src="lib/jquery-1.9.1.min.js"></script>
+  <script src="lib/html5-qrcode.min.js"></script>
+  <script src="js/util/HttpRequest.js"></script>
+  <script src="js/viewcontrollers/artwork.js"></script>
+  <script src="js/viewcontrollers/qrreader.js"></script>
+  <script src="js/viewcontrollers/notificationbar.js"></script>
+  <script src="js/main.js"></script>
+  </body>
+</html>

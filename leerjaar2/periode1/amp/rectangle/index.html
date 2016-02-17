@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<canvas id="rectangle" width="300" height="300">
+
+<script>
+rectangle1= new Rectangle();
+rectangle1.x=0;
+rectangle1.y=0;
+rectangle1.rectWidth=width;
+rectangle1.rectHeight= height;
+rectangle1.colorFill="blue";
+rectangle1.colorLine="blue";
+
+rectangle2= new Rectangle();
+rectangle2.x=300;
+rectangle2.y=0;
+rectangle2.rectWidth=width;
+rectangle2.rectHeight= height;
+rectangle2.colorFill="blue";
+rectangle2.colorLine="blue";
+
+rectangle3= new Rectangle();
+rectangle3.x=300;
+rectangle3.y=300;
+rectangle3.rectWidth=width;
+rectangle3.rectHeight= height;
+rectangle3.colorFill="blue";
+rectangle3.colorLine="blue";
+
+rectangle4= new Rectangle();
+rectangle4.x=0;
+rectangle4.y=300;
+rectangle4.rectWidth=width;
+rectangle4.rectHeight= height;
+rectangle4.colorFill="blue";
+rectangle4.colorLine="blue";
+
+rectangle5= new Rectangle();
+rectangle5.x=150;
+rectangle5.y=150;
+rectangle5.rectWidth=width;
+rectangle5.rectHeight= height;
+rectangle5.colorFill="blue";
+rectangle5.colorLine="blue";
+
+	function drawFrame () {
+		window.requestAnimationFrame(drawFrame,canvas);
+		context.clearRect(0,0, canvas.width, canvas.height);
+		rectangle5.rotation+=angularspeed;
+		rectangle5.draw(context);
+		rectangle1.draw(context);
+		rectangle2.draw(context);
+		rectangle3.draw(context);
+		rectangle4.draw(context);
+	}
+</script>
+
+	
+</canvas>
+</body>
+</html>

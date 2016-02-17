@@ -1,0 +1,16 @@
+body{ 
+	background-color: azure; 
+	
+}
+
+h1{
+	text-align: center;	
+}
+
+
+
+#canvas{
+    background-color: yellow;
+    border: 2px solid #000;
+    margin: 0% 20%;
+}

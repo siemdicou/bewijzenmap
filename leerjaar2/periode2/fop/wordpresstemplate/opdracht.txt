@@ -1,0 +1,18 @@
+Maak een pagina in HTML - CSS eventueel JS
+
+Sfeer
+De sfeer komt overeen met de berichten, die je gemaakt hebt bij de kennismaking WP
+
+Elementen
+De pagina bevat header (met achtergrondafbeelding), 
+navigatie, 
+inhoud (plaats daarin een bericht of pagina-inhoud naar keuze inclusief elementjes als datum en/of auteur), 
+aside voor widgets, 
+footer (daar kunnen ook widgets komen)
+een zoek-formulier: deze kan je naar keuze plaatsen in een eigen element, of in de lader, of in de navigatie of in de aside.
+
+Eis:
+de (statische) pagina is responsieve
+
+inleveren
+plaats het prototype online en een linkje hier in de ELO

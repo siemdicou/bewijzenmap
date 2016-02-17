@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Beroepen <small>beroepen overzicht</small></h1>
+            <ol class="breadcrumb">
+                <li class="active"><i class="fa fa-dashboard"></i> Beroepen</li>
+            </ol>
+        </div>
+
+        <div class="col-lg-12">
+            <p>
+                <a href="{{ urlFor('occupations_new') }}" class="btn btn-success">
+                    <i class="fa fa-plus"></i> Toevoegen
+                </a>
+            </p>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped tablesorter">
+                    <thead>
+                        <tr>
+                            <th class="header">Naam <i class="fa fa-sort"></i></th>
+                            <th class="header">Niveau <i class="fa fa-sort"></i></th>
+                            <th class="header">Talent <i class="fa fa-sort"></i></th>
+                            <th class="header">Laatst aangepast <i class="fa fa-sort"></i></th>
+                            <th class="header"></i></th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    {% for occupation in occupations %}
+                    <tr>
+                        <td>
+                            {{ occupation.name }}
+                        </td>
+                        <td>
+                            {{ occupation.education_level.name }}
+                        </td>
+                        <td>
+                            {{occupation.talent.name}}
+                        </td>
+                        <td>
+                            {{occupation.updated_at|date("H:i d/m/y")}}
+                        </td>
+                        <td>
+                            <a href="{{ urlFor('occupations_edit', {"id": occupation.id }) }}"><i class="fa fa-edit"></i></a>
+                            <a href="{{ urlFor('occupations_delete', {"id": occupation.id }) }}"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{%endblock%}

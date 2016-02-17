@@ -1,0 +1,60 @@
+/** File needs some cleaning */
+.noscroll {
+  overflow: hidden;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  @extend .noscroll;
+}
+
+body {
+  @extend html;
+}
+
+.full-width {
+  width:100%;
+  height:100%;
+}
+
+.table {
+    width:100%;
+    display:table;
+}
+
+.cell {
+    vertical-align:top;
+    display:table-cell;
+}
+
+.border-box {
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+   box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+div {
+    @extend .border-box;
+}
+
+.block {
+  display:table-cell;
+}
+
+.row {
+  display:table-row;
+  width:100%;
+}
+
+.span-one {
+  width: 100%;
+}
+
+.span-two-third {
+    width: calculate-width(2, 3); // spans 2 columns, width = 50%
+}
+ 
+.span-one-third {
+    width: calculate-width(1, 3); // spans 3 columns, width = 33.3%
+}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Talenten <small>talenten wijzigen</small></h1>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-dashboard"></i> Talenten</li>
+                <li class="active"><i class="fa fa-dashboard"></i> Talenten wijzigen</li>
+            </ol>
+        </div>
+
+        <div class="col-lg-12">
+            {% if request_method == 'POST' %}
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                    <h3 class="panel-title">Talent gewijzigd!</h3>
+                    </div>
+                    <div class="panel-body">
+                        Talent: {{new_talent.name}} <br/>
+                        Vragen:<br/>
+                        <ol>
+                        {% for question in new_talent.questions %}
+                            <li>{{question.question}}</li>
+                        {% endfor %}
+                        </ol>
+                    </div>
+                </div>
+
+                <a href="{{ urlFor('talents_overview') }}" class="btn btn-primary">
+                    <i class="fa fa-dashboard"></i> Overzicht
+                </a>
+                <a href="{{ urlFor('talents_edit', {"id": new_talent.id}) }}" class="btn btn-info">
+                    <i class="fa fa-edit"></i> Wijzig
+                </a>
+
+            {% endif %}
+            {% if request_method == 'GET' %}
+            <form class="form-horizontal" method="POST" action="{{ urlFor('talents_edit', {"id": talent.id}) }}">
+            <fieldset>
+
+            <!-- Form Name -->
+            <legend>{{talent.name}}</legend>
+
+            {% for question in talent.questions %}
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-2 control-label" for="textinput">Vraag {{loop.index}}</label>
+              <div class="col-md-8">
+              <input id="textinput" name="question[{{question.id}}]" type="text" value="{{question.question}}" class="form-control input-md" required="required">
+
+              </div>
+            </div>
+            {%endfor%}
+
+            <!-- Button (Double) -->
+            <div class="form-group">
+              <label class="col-md-2 control-label" for="button1id"></label>
+              <div class="col-md-8">
+                <button id="button1id" name="button1id" class="btn btn-success">Opslaan</button>
+                <button id="button2id" name="button2id" class="btn btn-danger">Annuleren</button>
+              </div>
+            </div>
+
+            </fieldset>
+            </form>
+            {%endif%}
+
+        </div>
+    </div>
+{%endblock%}

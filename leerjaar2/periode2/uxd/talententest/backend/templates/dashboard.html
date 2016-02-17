@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-lg-3">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-6">
+            <i class="fa fa-users fa-5x"></i>
+          </div>
+          <div class="col-xs-6 text-right">
+            <p class="announcement-heading">{{total_users}}</p>
+            <p class="announcement-text">Gebruikers</p>
+          </div>
+        </div>
+      </div>
+      <a href="{{ urlFor('users_overview') }}">
+        <div class="panel-footer announcement-bottom">
+          <div class="row">
+            <div class="col-xs-6">
+                Overzicht
+            </div>
+            <div class="col-xs-6 text-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+</div>
+
+<div class="col-lg-3">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-6">
+            <i class="fa fa-suitcase fa-5x"></i>
+          </div>
+          <div class="col-xs-6 text-right">
+            <p class="announcement-heading">{{total_occupations}}</p>
+            <p class="announcement-text">Beroepen</p>
+          </div>
+        </div>
+      </div>
+      <a href="{{ urlFor('occupations_overview') }}">
+        <div class="panel-footer announcement-bottom">
+          <div class="row">
+            <div class="col-xs-6">
+                Overzicht
+            </div>
+            <div class="col-xs-6 text-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+</div>
+
+<div class="col-lg-3">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-6">
+            <i class="fa fa-university fa-5x"></i>
+          </div>
+          <div class="col-xs-6 text-right">
+            <p class="announcement-heading">{{schools|length}}</p>
+            <p class="announcement-text">Scholen</p>
+          </div>
+        </div>
+      </div>
+      <a href="{{ urlFor('schools_overview') }}">
+        <div class="panel-footer announcement-bottom">
+          <div class="row">
+            <div class="col-xs-6">
+                Overzicht
+            </div>
+            <div class="col-xs-6 text-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+</div>
+
+<div class="col-lg-12">
+
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="col-sm-6 control-label">Filter op school: </label>
+      <div class="col-sm-6">
+        <select class="form-control" onchange="window.location.href=this.value">
+            <option value="">Geen</option>
+          {% for school in schools %}
+            <option value="{{ urlFor('dashboard', {"school_id": school.id }) }}" {% if active_school_id == school.id %} selected {% endif %}>{{school.name}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="col-lg-12">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Geregistreerde gebruikers</h3>
+    </div>
+    <div class="panel-body">
+        <div id="user-activity"></div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Gekozen talenten</h3>
+    </div>
+    <div class="panel-body">
+        <div id="most-picked-talents-donut"></div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Gekozen vaardigheden</h3>
+    </div>
+    <div class="panel-body">
+        <div id="most-picked-skills-donut"></div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Gekozen Schooladviezen</h3>
+    </div>
+    <div class="panel-body">
+        <div id="most-picked-schooladvices"></div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Geslacht gebruikers</h3>
+    </div>
+    <div class="panel-body">
+        <div id="donut-users-gender"></div>
+    </div>
+  </div>
+</div>
+
+{%endblock%}
+
+{% block extrajs %}
+<script>
+$(document).ready(function(){
+    Morris.Bar({
+        element: 'most-picked-talents-donut',
+        data: JSON.parse('{{most_picked_talents|json_encode|raw}}'),
+        xkey: 'label',
+        ykeys: ['female', 'male'],
+        labels: ['Vrouw', 'Man'],
+        xLabelAngle: 35,
+        hideHover: 'auto',
+        stacked: true,
+        hoverCallback: function (index, options, content) {
+            var body = content;
+            var total = parseInt(this.data[index].male, 10) + parseInt(this.data[index].female, 10);
+            body += "<div class='morris-hover-point' style='color: #0b62a4'>Totaal: "+total+"</div>";
+            return body;
+        }
+    });
+
+    Morris.Bar({
+        element: 'most-picked-skills-donut',
+        data: JSON.parse('{{most_picked_skills|json_encode|raw}}'),
+        xkey: 'label',
+        ykeys: ['female', 'male'],
+        labels: ['Vrouw', 'Man'],
+        xLabelAngle: 45,
+        hideHover: 'auto',
+        stacked: true,
+        hoverCallback: function (index, options, content) {
+            var body = content;
+            var total = parseInt(this.data[index].male, 10) + parseInt(this.data[index].female, 10);
+            body += "<div class='morris-hover-point' style='color: #0b62a4'>Totaal: "+total+"</div>";
+            return body;
+        }
+    });
+
+    Morris.Bar({
+        element: 'most-picked-schooladvices',
+        data: JSON.parse('{{most_schooladvices|json_encode|raw}}'),
+        xkey: 'label',
+        ykeys: ['female', 'male'],
+        labels: ['Vrouw', 'Man'],
+        xLabelAngle: 45,
+        hideHover: 'auto',
+        stacked: true,
+        hoverCallback: function (index, options, content) {
+            var body = content;
+            var total = parseInt(this.data[index].male, 10) + parseInt(this.data[index].female, 10);
+            body += "<div class='morris-hover-point' style='color: #0b62a4'>Totaal: "+total+"</div>";
+            return body;
+        }
+    });
+
+    Morris.Area({
+        element: 'user-activity',
+        data: JSON.parse('{{ users.created_by_day|json_encode|raw }}'),
+        xkey: 'day',
+        ykeys: ['amount'],
+        labels: ['hoeveelheid'],
+        pointSize: 2,
+        hideHover: 'auto'
+      });
+
+    Morris.Donut({
+      element: 'donut-users-gender',
+      data: JSON.parse('{{ users_gender|json_encode|raw}}'),
+      formatter: function (y) {
+        var total = this.data[0].value + this.data[1].value;
+        return Math.round((y / total * 100) * 100) / 100 + "%";
+      }
+    });
+});
+</script>
+{% endblock %}

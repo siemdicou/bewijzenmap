@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Talenten <small>talenten overzicht</small></h1>
+            <ol class="breadcrumb">
+                <li class="active"><i class="fa fa-dashboard"></i> Talenten</li>
+            </ol>
+        </div>
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped tablesorter">
+                    <thead>
+                        <tr>
+                            <th class="header">Naam <i class="fa fa-sort"></i></th>
+                            <th class="header"></th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    {% for talent in talents %}
+                    <tr>
+                        <td>
+                            {{ talent.name }}
+                        </td>
+                        <td>
+                            <a href="{{ urlFor('talents_edit', {"id": talent.id }) }}"><i class="fa fa-edit"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{%endblock%}

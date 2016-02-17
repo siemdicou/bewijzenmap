@@ -1,0 +1,16 @@
+.touch-scroll {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+a {
+    background:$color-bunker;
+    color:white;
+    padding:3px;
+    text-decoration: none;
+}

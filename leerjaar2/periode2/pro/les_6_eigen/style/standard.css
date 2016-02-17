@@ -1,0 +1,29 @@
+.notification-bar {
+    top:-100px;
+    position: relative;
+    border: 1px solid #7f9a40;
+    background: #9fc150;
+    border-radius: 5px;
+    padding: 5px;
+    border-bottom-width: 2.5px !important;
+    font-family: monospace;
+    text-align: center;
+}
+
+.notification-bar.enabled {
+    top:0px;
+}
+
+.notification-bar.error {
+    background: red;
+    border-color: darkred;
+    color:white;
+}
+
+.animatedCSS {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}

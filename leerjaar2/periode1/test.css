@@ -1,0 +1,144 @@
+html body{
+height:200px;
+width:100%;
+margin:0;
+padding:0;
+
+}
+#ingang{
+
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/l41m0IGHfKWA6migE.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+#wc{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/xTiTnAEVyC9KCAZKE0.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+#kantine{
+	height: 100%;
+	width: 100%;
+	background-image:url(http://i.giphy.com/xTiTnp9ZE79k3MdikE.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#ict{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/xTiTnzYPiPp4nc3kTm.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+#printers{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/xTiTnJJ1WxD6oCUIrC.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+#plein{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/l41lGEz2xclXBoUjm.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+
+#acteursgang{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/l41lUe6rIxfHTNm3C.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+#afdelingsleider{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/3oEduOmsDcR14E5fG0.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+#buitenplaats{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/3oEduOc4SC5JrN45aM.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+#decaan{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/3oEduK5rgm7tGU0WBy.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+#factory{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/l41lGoY2kDAdJuOmA.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+#snoepautomaat{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/3oEduQCtFfibTOVLoY.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+#goed{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/l41lY2IiWbn87sFva.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+#fout{
+	height: 100%;
+	width: 100%;
+	 background-image:url(http://i.giphy.com/l0O9x1c2iJ3Fs92Xm.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+.vraag{
+	text-align: center;
+	font-size:24px;
+}
+#fotokader img{
+	width: 48%;
+		-ms-transform: rotate(7deg);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(7deg);
+	height: 40%;
+	border: 2px solid;	
+}

@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /api/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
+# Php strips out the authorization header.
+RewriteCond %{HTTP:Authorization} ^(.*)$ [NC]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%1]
+
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Headers "Authorization, Content-Type"

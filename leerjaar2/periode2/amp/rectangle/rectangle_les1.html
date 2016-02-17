@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+  <!-- siem dicou -->
+    <meta charset="utf-8">
+    <title>Rectangle</title>
+    <link rel="stylesheet" href="./include/style.css">
+	<meta name="author" content="Mediacollege Amsterdam">
+  </head>
+  <body>
+    
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <script src="./include/utils.js"></script>
+    <script src="classes/rectangle.js"></script>
+    <script>
+	var yellow = "#FFFF00";
+	var blue = "#00FF00";
+	var width = 149.99;
+	var height = 149.99;
+
+    window.onload = function () {
+		  var canvas = document.getElementById('canvas'),
+          context = canvas.getContext('2d');
+          mouse = utils.captureMouse(canvas);
+      var rotate = 0.01;
+
+          rectangle1 = new Rectangle(); // instance 
+		  rectangle1.x = 70;
+		  rectangle1.y = 70;
+		  rectangle1.rectWidth = width;
+		  rectangle1.rectHeight = height;
+		  rectangle1.colorFill = "yellow";
+		  rectangle1.colorLine = "yellow";
+                rectangle2 = new Rectangle(); // instance 
+		  rectangle2.x = 225;
+		  rectangle2.y = 70;
+		  rectangle2.rectWidth = width;
+		  rectangle2.rectHeight = height;
+		  rectangle2.colorFill = "yellow";
+		  rectangle2.colorLine = "yellow";
+                rectangle3 = new Rectangle(); // instance 
+		  rectangle3.x = 70;
+		  rectangle3.y = 225;
+		  rectangle3.rectWidth = width;
+		  rectangle3.rectHeight = height;
+		  rectangle3.colorFill = "yellow";
+		  rectangle3.colorLine = "yellow";
+                rectangle4 = new Rectangle(); // instance 
+		  rectangle4.x = 225;
+		  rectangle4.y = 225;
+		  rectangle4.rectWidth = width;
+		  rectangle4.rectHeight = height;
+		  rectangle4.colorFill = "yellow";
+		  rectangle4.colorLine = "yellow";
+                      rectangle5 = new Rectangle(); // instance 
+		  rectangle5.x = 150;
+		  rectangle5.y = 150;
+		  rectangle5.rectWidth = width;
+		  rectangle5.rectHeight = height;
+		  rectangle5.colorFill = "black";
+		  rectangle5.colorLine = "#fff";     
+      
+		  
+		    (function drawFrame () {
+			 window.requestAnimationFrame(drawFrame, canvas);
+			 context.clearRect(0,0,canvas.width, canvas.height);
+       rectangle5.rotation += rotate; 
+       rectangle5.draw(context);
+		rectangle1.draw(context);
+       rectangle2.draw(context);
+       rectangle3.draw(context);
+       rectangle4.draw(context);
+		  }());
+    };
+	</script>
+  </body>
+</html>

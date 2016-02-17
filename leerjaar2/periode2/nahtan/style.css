@@ -1,0 +1,62 @@
+html body{
+	width: 100%;
+	height: 100%;
+	background-image: url(http://i.imgur.com/IA7y2Fy.gif);
+	background-attachment: absolute;
+	background-size:cover;
+}
+ul ul{
+	display: inline-table;
+}
+ul {
+	background-color: #ffffff;
+/*	height: 10%;*/
+	margin: 0;
+	opacity: 0.5;
+	padding: 5px;
+	text-align: center;
+
+}
+ul a {
+	color:black;
+	border:2px solid;
+	/*padding: 2px;	*/
+	font-size: 28px;
+	opacity: 1.0;
+}
+ul a:hover{
+	color:red;
+	border:2px solid;
+	padding: 2px;	
+	font-size: 28px;
+
+}
+#wrapper{
+	width: 80%;
+	background-color:pink;
+	color: blue;
+	margin: 0% 10%; 
+}
+#home_img{
+	width: 20%;
+		/*display: inline-block;*/
+		}
+#home_img img{
+	width: 100%;
+
+
+}
+#home_content{
+	width: 59%;
+		/*display: inline-block;*/
+}
+#werken #home_img img{
+	width: 59%;
+		/*display: inline-block;*/
+}
+hr{
+	color: black;
+	background-color: black;
+	width:100%;
+}
+

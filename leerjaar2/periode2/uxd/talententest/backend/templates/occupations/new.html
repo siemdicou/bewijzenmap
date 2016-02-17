@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Beroepen <small>beroep toevoegen</small></h1>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-dashboard"></i> Beroepen</li>
+                <li class="active"><i class="fa fa-dashboard"></i> Nieuw</li>
+            </ol>
+        </div>
+
+        <div class="col-lg-12">
+
+            {% if request_method == 'POST' %}
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                <h3 class="panel-title">Beroep toegevoegd!</h3>
+                </div>
+                <div class="panel-body">
+                    Titel: {{new_occupation.name}} <br/>
+                    Beschrijving: {{new_occupation.description|raw}} <br/>
+                    Youtube: <a href="http://www.youtube.com/watch?v={{new_occupation.youtube}}">http://www.youtube.com/watch?v={{new_occupation.youtube}}</a> <br/>
+                    Niveau: {{new_occupation.educationLevel.name}} <br/>
+                    Talent: {{new_occupation.talent.name}} <br/>
+                </div>
+            </div>
+            <a href="{{ urlFor('occupations_overview') }}" class="btn btn-primary">
+                <i class="fa fa-dashboard"></i> Overzicht
+            </a>
+            <a href="{{ urlFor('occupations_edit', {"id": new_occupation.id}) }}" class="btn btn-info">
+                <i class="fa fa-edit"></i> Wijzig
+            </a>
+            <a href="{{ urlFor('occupations_delete', {"id": new_occupation.id}) }}" class="btn btn-danger">
+                <i class="fa fa-edit"></i> Verwijder
+            </a>
+            {%endif%}
+
+            {% if request_method == 'GET' %}
+            <form class="form-horizontal" method="POST" action="{{ urlFor('occupations_new') }}">
+            <fieldset>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-2 control-label" for="title">Titel</label>
+              <div class="col-md-8">
+              <input id="title" name="title" type="text" placeholder="Grafisch vormgever" class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-2 control-label" for="description">Beschrijving</label>
+              <div class="col-md-8">
+                <textarea class="form-control" rows="10" id="ckeditor" name="description">Een grafisch vormgever is een</textarea>
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-2 control-label" for="yt-video">Youtube video</label>
+              <div class="col-md-8">
+              <input id="yt-video" name="yt-video" type="text" placeholder="http://www.youtube.com/watch?v=-74Ps4whkog" class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <!-- Multiple Radios -->
+            <div class="form-group">
+              <label class="col-md-2 control-label" for="talent">Talent</label>
+              <div class="col-md-4">
+              {% for talent in talents %}
+              <div class="radio">
+                <label for="talent-{{talent.id}}">
+                    <input type="radio" name="talent" id="talent-{{talent.id}}" value="{{talent.id}}" required="required"/>
+                  {{talent.name}}
+                </label>
+                </div>
+              {% endfor %}
+              </div>
+            </div>
+
+            <!-- Multiple Radios -->
+            <div class="form-group">
+              <label class="col-md-2 control-label" for="educationlevel">Niveau</label>
+              <div class="col-md-4">
+              {% for level in education_levels %}
+              <div class="radio">
+                <label for="educationlevel-{{level.id}}">
+                    <input type="radio" name="educationlevel" id="educationlevel-{{level.id}}" value="{{level.id}}" required="required"/>
+                  {{level.name}}
+                </label>
+                </div>
+                {%endfor%}
+              </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-2 control-label">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fa fa-plus"></i> Voeg toe
+                    </button>
+                </div>
+            </div>
+            </fieldset>
+            </form>
+            {%endif%}
+
+        </div>
+    </div>
+{%endblock%}

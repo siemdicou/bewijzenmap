@@ -1,0 +1,47 @@
+void setup(){
+  Serial.begin(9600);
+
+  //Set all the pins we need to output pins
+  pinMode(13, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
+void loop (){
+  if (Serial.available()) {
+
+    char ser = Serial.read();
+
+    switch (ser) {
+      case 'y':
+        on(13);
+        break;
+      case 'yW':
+        off(13);
+        break;
+        
+      case 'r':
+        on(8);
+        break;
+      case 'rD':
+        off(8);
+        break;
+        
+      case 'g':
+        on(4);
+        break;
+      case 'gN':
+        off(4);
+        break;
+    } 
+  }
+}
+
+void on(int pin){
+  digitalWrite(pin, HIGH);
+  delay(250);
+}
+void off(int pin){
+  digitalWrite(pin, LOW);
+  delay(250);
+}

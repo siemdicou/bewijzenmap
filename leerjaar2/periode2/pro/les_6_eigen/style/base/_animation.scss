@@ -1,0 +1,7 @@
+.animatedCSS {
+    -webkit-transition: $animation-settings;
+    -moz-transition: $animation-settings;
+    -ms-transition: $animation-settings;
+    -o-transition: $animation-settings;
+    transition: $animation-settings;
+}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>vaardigheden <small>vaardigheden overzicht</small></h1>
+            <ol class="breadcrumb">
+                <li class="active"><i class="fa fa-dashboard"></i> vaardigheden</li>
+            </ol>
+        </div>
+
+        <div class="col-lg-12">
+            <p>
+                <a href="{{ urlFor('skills_new') }}" class="btn btn-success">
+                    <i class="fa fa-plus"></i> Toevoegen
+                </a>
+            </p>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped tablesorter">
+                    <thead>
+                        <tr>
+                            <th class="header">Naam <i class="fa fa-sort"></i></th>
+                            <th class="header"></i></th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    {% for skill in skills %}
+                    <tr>
+                        <td>
+                            {{ skill.name }}
+                        </td>
+                        <td>
+                            <a href="{{ urlFor('skills_edit', {"id": skill.id }) }}"><i class="fa fa-edit"></i></a>
+                            <a href="{{ urlFor('skills_delete', {"id": skill.id }) }}"><i class="fa fa-trash-o"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{%endblock%}
