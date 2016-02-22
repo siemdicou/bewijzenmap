@@ -38,6 +38,7 @@ require 'model/getContent.php';?>
 		echo $result[0]['pageTitle'];
 		echo "<Br>";
 		echo $result[0]['pageCont'];
+		echo "<Br>";
 		echo '<img src="img/'.$result[0]['image'].'">';
 		echo "<hr>";
 		?>

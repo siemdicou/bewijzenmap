@@ -47,12 +47,13 @@ a:focus{
 }
 
 .section-title hr{
-	border-color: #fcac45;
+	border-color: #71AEBF;
 	border-width: 4px;
-	width: 60px;
+	width: 120px;
 	float: left;
 	clear: both;
 }
+
 .clearfix:after {
      visibility: hidden;
      display: block;
@@ -162,9 +163,9 @@ a.fa.fa-angle-down {
 	transition: all 0.5s;
 }
 a.fa.fa-angle-down:hover{
-	background: #fcac45;
+	background: #71AEBF;
 	color: #ffffff;
-	border: 2px solid #fcac45;
+	border: 2px solid #fff;
 }
 /* About Section */
 #tf-about{
@@ -569,11 +570,9 @@ nav#footer p{
 	transition: all 0.5s;
 }
 #footer i.fa:hover{
-	background: #FCAC45;
-	border-color: #FCAC45;
+	background: #71AEBF;
+	border-color: #fff;
 	color: #ffffff;
 }
-
-
 
 
