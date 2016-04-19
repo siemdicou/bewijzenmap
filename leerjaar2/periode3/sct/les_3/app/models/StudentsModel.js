@@ -4,12 +4,11 @@ var app = app || {};
 // dit object bevat de functies om studenten op te halen, etc.
 // vanuit dit bestand ga je ook je PHP API lastig vallen met de vraag "mag ik alle studenten"
 
-new app.studentModel(
+app.studentsModel = {
+
+    loadStudents: function() {
+
+    }
 
 
-	)
-	
-	function getRandomStudent() {
-		// body...
-	}
-	getRandomStudent();
+}

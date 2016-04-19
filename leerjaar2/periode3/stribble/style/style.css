@@ -1,9 +1,3 @@
-/*-------------------------------------------------------+
-| Content Management System 
-| http://www.phphelptutorials.com/
-+--------------------------------------------------------+
-| Author: David Carr  Email: dave@daveismyname.com
-+--------------------------------------------------------+*/
 
 body {
   font-size: 80%;
@@ -141,6 +135,22 @@ label {
 	font-weight:bold;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 }
+
+.country{
+	margin: 3%;
+	display: inline-block;
+	width: 25%;
+	/*float: left;*/
+	text-align: center;
+	color: black;
+}
+.country img{
+	width: 80%;
+}
+#selectedImage{
+	width: 17%;
+}
+
 	
 /* MESSAGES */
 .hidethis { cursor:pointer; }

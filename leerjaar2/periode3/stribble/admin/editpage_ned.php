@@ -1,0 +1,94 @@
+<?php 
+
+require('../includes/config.php'); 
+
+if(!isset($_GET['id']) || $_GET['id'] == ''){ //if no id is passed to this page take user back to previous page
+	header('Location: '.DIRADMIN); 
+}
+
+if(isset($_POST['submit'])){
+
+	$title = $_POST['pageTitle'];
+	$content = $_POST['pageCont'];
+	$pageID = $_POST['pageID'];
+	$newImage = $_POST['image'];
+	
+	$title = mysql_real_escape_string($title);
+	$content = mysql_real_escape_string($content);
+	
+	if (empty($newImage) && $hasFile =1){
+		$sql="UPDATE pages SET pageTitle='$title', pageCont='$content' WHERE pageID='$pageID'";
+	}
+	else{
+		$sql="UPDATE pages SET pageTitle='$title', pageCont='$content', image='$newImage'WHERE pageID='$pageID'";
+	}
+
+	mysql_query($sql);
+	$_SESSION['success'] = 'Page Updated';
+	header('Location: index.php?lang=dutch');
+	exit();
+}
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo SITETITLE;?></title>
+<link rel="icon" type="image/png" href="../img/logoblank.png">
+<link rel="shortcut icon" type="image/png" href="../img/logoblank.png">
+<link href="<?php echo DIR;?>style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="wrapper">
+
+
+<!-- NAV -->
+<div id="navigation">
+<ul class="menu">
+<li><a href="<?php echo DIRADMIN;?>">Admin</a></li>
+<li><a href="<?php echo DIRADMIN;?>?logout">Logout</a></li>
+<li><a href="<?php echo DIR;?>" target="_blank">View Website</a></li>
+</ul>
+</div>
+<!-- END NAV -->
+
+<div id="content">
+
+<h1>Bewerken pagina</h1>
+
+<?php
+$id = $_GET['id'];
+$id = mysql_real_escape_string($id);
+$q = mysql_query("SELECT * FROM pages WHERE pageID='$id'");
+$row = mysql_fetch_object($q);
+?>
+
+
+<form action="" method="post">
+<input type="hidden" name="pageID" value="<?php echo $row->pageID;?>" />
+<p>Title:<br /> <input name="pageTitle" type="text" value="<?php echo $row->pageTitle;?>" size="103" />
+</p>
+<p>content<br /><textarea name="pageCont" cols="100" rows="20"><?php echo $row->pageCont;?></textarea>
+</p>
+<input type="file" name="image" accept="image/*" >
+<br>
+<br>
+<?php  
+if (!empty($row->image) ){
+	$hasFile = 1;
+	echo 'U hebt nu deze afbleeding:<br> <img src="../img/'.$row->image.'" id="selectedImage">';
+}
+?>
+
+<p><input type="submit" name="submit" value="Submit" class="button" /></p>
+</form>
+
+</div>
+
+<div id="footer">	
+		<div class="copy">&copy; <?php echo SITETITLE.' '. date('Y');?> </div>
+</div><!-- close footer -->
+</div><!-- close wrapper -->
+
+</body>
+</html>

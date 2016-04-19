@@ -1,0 +1,33 @@
+html body{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+    .parallax-container {
+      height: 500px;
+    }
+
+      header, main, footer {
+    padding-left: 240px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+
+  nav{
+	position: fixed;
+  }
+  nav a:hover{
+  	color: black;
+  }
+
+  #home_img{
+  	width: 20%;
+  	float: right;
+  	/*display: inline-block;*/
+  	margin-top: -12%;
+  }
+  	

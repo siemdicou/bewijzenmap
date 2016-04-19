@@ -1,22 +1,47 @@
 <?php 
+/*-------------------------------------------------------+
+| Content Management System 
+| http://www.phphelptutorials.com/
++--------------------------------------------------------+
+| Author: David Carr  Email: dave@daveismyname.co.uk
++--------------------------------------------------------+*/
 
-require('../includes/config.php');
-require('editpage_model.php'); 
+require('../includes/config.php'); 
 
+if(!isset($_GET['id']) || $_GET['id'] == ''){ //if no id is passed to this page take user back to previous page
+	header('Location: '.DIRADMIN); 
+}
+
+if(isset($_POST['submit'])){
+
+	$title = $_POST['pageTitle'];
+	$content = $_POST['pageCont'];
+	$pageID = $_POST['pageID'];
+	$newImage = $_POST['image'];
+	
+	$title = mysql_real_escape_string($title);
+	$content = mysql_real_escape_string($content);
+	
+	mysql_query("UPDATE pages SET pageTitle='$title', pageCont='$content', image='$newImage'WHERE pageID='$pageID'");
+	$_SESSION['success'] = 'Page Updated';
+	header('Location: '.DIRADMIN);
+	exit();
+
+}
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo SITETITLE;?></title>
-<link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png">
-<link rel="shortcut icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png">
+<link rel="icon" type="image/png" href="../img/logoblank.png">
+<link rel="shortcut icon" type="image/png" href="../img/logoblank.png">
 <link href="<?php echo DIR;?>style/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="wrapper">
 
-<!-- <div id="logo"><a href="<?php echo DIR;?>"><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="<?php echo SITETITLE;?>" title="<?php echo SITETITLE;?>" border="0" /></a></div> --><!-- close logo -->
 
 <!-- NAV -->
 <div id="navigation">
@@ -32,7 +57,15 @@ require('editpage_model.php');
 
 <h1>Edit Page</h1>
 
-<form action="editpage_model.php" method="post" enctype="multipart/form-data">
+<?php
+$id = $_GET['id'];
+$id = mysql_real_escape_string($id);
+$q = mysql_query("SELECT * FROM pages WHERE pageID='$id'");
+$row = mysql_fetch_object($q);
+?>
+
+
+<form action="" method="post">
 <input type="hidden" name="pageID" value="<?php echo $row->pageID;?>" />
 <p>Title:<br /> <input name="pageTitle" type="text" value="<?php echo $row->pageTitle;?>" size="103" />
 </p>

@@ -1,8 +1,26 @@
 <HTML>
-<head>
-	<script type="text/javascript" src="views/RandomstudentView.js"></script>
-	<script type="text/javascript" src="model/studentModel.js"></script>
-</head>
+<head></head>
 <body>
+
+<div id="btn1">testknop 1</div>
+<div id="btn2">testknop 2</div>
+
+<div class="container"></div>
+
+<script id="students-template" type="text/x-handlebars-template">
+    {{#each students}}
+
+    <p>voornaam:{{firstName}}</p>
+    <p>achternaam:{{lastName}}</p>
+    <p>leeftijd:{{age}}</p>
+    <hr>
+
+    {{/each}}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+<script src="app/models/StudentsModel.js"></script>
+<script src="app/views/RandomStudentView.js"></script>
+<script src="app/app.js"></script>
 </body>
 </HTML>

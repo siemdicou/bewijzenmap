@@ -1,0 +1,25 @@
+<HTML>
+<head></head>
+<body>
+
+<div id="btn1">testknop 1</div>
+<div id="btn2">testknop 2</div>
+
+<div class="container"></div>
+
+<script id="students-template" type="text/x-handlebars-template">
+    {{#each students}}
+
+    <p data-id="{{id}}">{{firstName}}</p>
+
+    {{/each}}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+<script src="util/EventDispatcher.js"></script>
+<script src="util/HttpRequest.js"></script>
+<script src="app/models/StudentsModel.js"></script>
+<script src="app/views/RandomStudentView.js"></script>
+<script src="app/app.js"></script>
+</body>
+</HTML>

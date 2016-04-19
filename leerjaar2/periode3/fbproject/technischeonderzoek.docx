@@ -1,0 +1,762 @@
+Dit is een array van de data die ik allemaal op kan halen van facebook:
+
+Samengevat:
+
+	Naam (voor en achter-naam)
+	Likes
+	Profiel foto
+	Id
+	Sports
+	Timezone
+	Secure browser
+	
+Helaas is het meeste protected 
+	
+
+
+
+object(Facebook\GraphNodes\GraphNode)#79 (1) {
+  ["items":protected]=>
+  array(27) {
+    ["id"]=>
+    string(15) "802701816528628"
+    ["name"]=>
+    string(10) "Siem Dicou"
+    ["context"]=>
+    object(Facebook\GraphNodes\GraphNode)#40 (1) {
+      ["items":protected]=>
+      array(2) {
+        ["mutual_likes"]=>
+        object(Facebook\GraphNodes\GraphEdge)#39 (5) {
+          ["request":protected]=>
+          object(Facebook\FacebookRequest)#11 (9) {
+            ["app":protected]=>
+            object(Facebook\FacebookApp)#3 (2) {
+              ["id":protected]=>
+              string(16) "1685947078320113"
+              ["secret":protected]=>
+              string(32) "e6dad6b6fc477188872914a1835522ef"
+            }
+            ["accessToken":protected]=>
+            string(204) "CAAX9XCS2nZCEBALdZC4fKRQD5Qh53xCooYOjKupPgZBZBlWJ0tK1Uh8MAZBgVK9xbZAAAaZARRmmdk8ARuZAI8IZBANnLsELU6kg4I9EcaW33qZAWLzGhZAmSC5vWpqr3bKYzJzo3ro0ejnnVZBVwpej139ZAP3XumbSzULN5sFacAHqdEt0y9kKzDkKIHzZCt1CiTiBYZD"
+            ["method":protected]=>
+            string(3) "GET"
+            ["endpoint":protected]=>
+            string(669) "/me?fields=id%2Cname%2Cbio%2Cbirthday%2Ccontext%2Ccover%2Ccurrency%2Cdevices%2Ceducation%2Cemail%2Cfavorite_athletes%2Cfavorite_teams%2Cfirst_name%2Cgender%2Chometown%2Cinspirational_people%2Cinstall_type%2Cinstalled%2Cinterested_in%2Cis_shared_login%2Cis_verified%2Clanguages%2Clast_name%2Clink%2Clocale%2Clocation%2Cmeeting_for%2Cmiddle_name%2Cname_format%2Cpayment_pricepoints%2Cpolitical%2Cpublic_key%2Cquotes%2Crelationship_status%2Creligion%2Csecurity_settings%2Cshared_login_upgrade_required_by%2Csignificant_other%2Csports%2Ctest_group%2Cthird_party_id%2Ctimezone%2Cupdated_time%2Cverified%2Cvideo_upload_limits%2Cviewer_can_send_gift%2Cwebsite%2Cwork&debug=all"
+            ["headers":protected]=>
+            array(1) {
+              ["Content-Type"]=>
+              string(33) "application/x-www-form-urlencoded"
+            }
+            ["params":protected]=>
+            array(0) {
+            }
+            ["files":protected]=>
+            array(0) {
+            }
+            ["eTag":protected]=>
+            NULL
+            ["graphVersion":protected]=>
+            string(4) "v2.5"
+          }
+          ["metaData":protected]=>
+          array(2) {
+            ["paging"]=>
+            array(2) {
+              ["cursors"]=>
+              array(2) {
+                ["before"]=>
+                string(20) "NTkyNzAyODM3NDMwMDY2"
+                ["after"]=>
+                string(20) "Mjc1NjQ4NDYyNDc4MDE1"
+              }
+              ["next"]=>
+              string(435) "https://graph.facebook.com/v2.5/dXNlcl9jb250ZAXh0OgGQy2yuYdgolKDKgXNfAveDcaS0vbgIkknYg77vZA8WJyZASPS0x4ZAopMZC1gvt5HLw76kubChbsYqWDuLAPZBJcMDk8ZCT9lSpa1lrOW3ssR2m9DdgZD/mutual_likes?access_token=CAAX9XCS2nZCEBALdZC4fKRQD5Qh53xCooYOjKupPgZBZBlWJ0tK1Uh8MAZBgVK9xbZAAAaZARRmmdk8ARuZAI8IZBANnLsELU6kg4I9EcaW33qZAWLzGhZAmSC5vWpqr3bKYzJzo3ro0ejnnVZBVwpej139ZAP3XumbSzULN5sFacAHqdEt0y9kKzDkKIHzZCt1CiTiBYZD&limit=25&after=Mjc1NjQ4NDYyNDc4MDE1"
+            }
+            ["summary"]=>
+            array(1) {
+              ["total_count"]=>
+              int(92)
+            }
+          }
+          ["parentEdgeEndpoint":protected]=>
+          string(154) "/dXNlcl9jb250ZAXh0OgGQ1cVVZB70EZBB2XCXbdkpiFJYjopPZA1wpiG2CCYLjZA0g88beZAVrKiuZBBS4UyHn8C4lZBWfNvq7zjZB6JTTER4hTNjXZCbUw5TXwZBLdRNAf8UCYGr0ZD/mutual_likes"
+          ["subclassName":protected]=>
+          NULL
+          ["items":protected]=>
+          array(25) {
+            [0]=>
+            object(Facebook\GraphNodes\GraphNode)#14 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(14) "Travel Diaries"
+                ["id"]=>
+                string(15) "592702837430066"
+              }
+            }
+            [1]=>
+            object(Facebook\GraphNodes\GraphNode)#15 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(14) "Butter Project"
+                ["id"]=>
+                string(15) "399318463526859"
+              }
+            }
+            [2]=>
+            object(Facebook\GraphNodes\GraphNode)#16 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(22) "De Dyslexie Experience"
+                ["id"]=>
+                string(15) "476204739222377"
+              }
+            }
+            [3]=>
+            object(Facebook\GraphNodes\GraphNode)#17 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(20) "Amsterdam Street Art"
+                ["id"]=>
+                string(12) "253738832208"
+              }
+            }
+            [4]=>
+            object(Facebook\GraphNodes\GraphNode)#18 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(13) "Peter Jackson"
+                ["id"]=>
+                string(12) "141884481557"
+              }
+            }
+            [5]=>
+            object(Facebook\GraphNodes\GraphNode)#19 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(13) "Tyrese Gibson"
+                ["id"]=>
+                string(15) "199633956730875"
+              }
+            }
+            [6]=>
+            object(Facebook\GraphNodes\GraphNode)#20 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(16) "Hart voor Auto's"
+                ["id"]=>
+                string(15) "179272868768187"
+              }
+            }
+            [7]=>
+            object(Facebook\GraphNodes\GraphNode)#21 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(5) "Massi"
+                ["id"]=>
+                string(15) "531041333743906"
+              }
+            }
+            [8]=>
+            object(Facebook\GraphNodes\GraphNode)#22 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(12) "Bundle Stars"
+                ["id"]=>
+                string(15) "412222678827048"
+              }
+            }
+            [9]=>
+            object(Facebook\GraphNodes\GraphNode)#23 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(8) "PC Gamer"
+                ["id"]=>
+                string(10) "6738073078"
+              }
+            }
+            [10]=>
+            object(Facebook\GraphNodes\GraphNode)#24 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(10) "Hertog Jan"
+                ["id"]=>
+                string(15) "143941822338196"
+              }
+            }
+            [11]=>
+            object(Facebook\GraphNodes\GraphNode)#25 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(22) "Dutch Health Hackathon"
+                ["id"]=>
+                string(16) "1555957404673063"
+              }
+            }
+            [12]=>
+            object(Facebook\GraphNodes\GraphNode)#26 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(28) "Mind Well Studio: Amature 3D"
+                ["id"]=>
+                string(16) "1428545084140114"
+              }
+            }
+            [13]=>
+            object(Facebook\GraphNodes\GraphNode)#27 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(18) "Ed's Fietstechniek"
+                ["id"]=>
+                string(15) "421261657962821"
+              }
+            }
+            [14]=>
+            object(Facebook\GraphNodes\GraphNode)#28 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(9) "Alienware"
+                ["id"]=>
+                string(15) "281528311860594"
+              }
+            }
+            [15]=>
+            object(Facebook\GraphNodes\GraphNode)#29 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(31) "Street FX Motorsport & Graphics"
+                ["id"]=>
+                string(12) "305901075111"
+              }
+            }
+            [16]=>
+            object(Facebook\GraphNodes\GraphNode)#30 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(11) "LeagueMemes"
+                ["id"]=>
+                string(15) "305028356223618"
+              }
+            }
+            [17]=>
+            object(Facebook\GraphNodes\GraphNode)#31 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(26) "Bonami Spelcomputer Museum"
+                ["id"]=>
+                string(15) "286347581474987"
+              }
+            }
+            [18]=>
+            object(Facebook\GraphNodes\GraphNode)#32 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(9) "Tony Hawk"
+                ["id"]=>
+                string(11) "21744379694"
+              }
+            }
+            [19]=>
+            object(Facebook\GraphNodes\GraphNode)#33 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(11) "Peacemakers"
+                ["id"]=>
+                string(15) "223473294507030"
+              }
+            }
+            [20]=>
+            object(Facebook\GraphNodes\GraphNode)#34 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(9) "Flashback"
+                ["id"]=>
+                string(15) "387395521442565"
+              }
+            }
+            [21]=>
+            object(Facebook\GraphNodes\GraphNode)#35 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(18) "People Are Awesome"
+                ["id"]=>
+                string(15) "305140869535098"
+              }
+            }
+            [22]=>
+            object(Facebook\GraphNodes\GraphNode)#36 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(5) "GoPro"
+                ["id"]=>
+                string(11) "50043151918"
+              }
+            }
+            [23]=>
+            object(Facebook\GraphNodes\GraphNode)#37 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(13) "Antiek Tattoo"
+                ["id"]=>
+                string(16) "1379098289006588"
+              }
+            }
+            [24]=>
+            object(Facebook\GraphNodes\GraphNode)#38 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["name"]=>
+                string(13) "Martin Garrix"
+                ["id"]=>
+                string(15) "275648462478015"
+              }
+            }
+          }
+        }
+        ["id"]=>
+        string(140) "dXNlcl9jb250ZAXh0OgGQ1cVVZB70EZBB2XCXbdkpiFJYjopPZA1wpiG2CCYLjZA0g88beZAVrKiuZBBS4UyHn8C4lZBWfNvq7zjZB6JTTER4hTNjXZCbUw5TXwZBLdRNAf8UCYGr0ZD"
+      }
+    }
+    ["currency"]=>
+    object(Facebook\GraphNodes\GraphNode)#41 (1) {
+      ["items":protected]=>
+      array(4) {
+        ["currency_offset"]=>
+        int(100)
+        ["usd_exchange"]=>
+        float(1.1031669)
+        ["usd_exchange_inverse"]=>
+        float(0.9064811499)
+        ["user_currency"]=>
+        string(3) "EUR"
+      }
+    }
+    ["devices"]=>
+    object(Facebook\GraphNodes\GraphNode)#43 (1) {
+      ["items":protected]=>
+      array(1) {
+        [0]=>
+        object(Facebook\GraphNodes\GraphNode)#42 (1) {
+          ["items":protected]=>
+          array(1) {
+            ["os"]=>
+            string(7) "Android"
+          }
+        }
+      }
+    }
+    ["email"]=>
+    string(21) "siemdicou@hotmail.com"
+    ["favorite_athletes"]=>
+    object(Facebook\GraphNodes\GraphNode)#46 (1) {
+      ["items":protected]=>
+      array(2) {
+        [0]=>
+        object(Facebook\GraphNodes\GraphNode)#44 (1) {
+          ["items":protected]=>
+          array(2) {
+            ["id"]=>
+            string(11) "21744379694"
+            ["name"]=>
+            string(9) "Tony Hawk"
+          }
+        }
+        [1]=>
+        object(Facebook\GraphNodes\GraphNode)#45 (1) {
+          ["items":protected]=>
+          array(2) {
+            ["id"]=>
+            string(12) "139454585764"
+            ["name"]=>
+            string(9) "Ken Block"
+          }
+        }
+      }
+    }
+    ["first_name"]=>
+    string(4) "Siem"
+    ["gender"]=>
+    string(4) "male"
+    ["install_type"]=>
+    string(7) "UNKNOWN"
+    ["installed"]=>
+    bool(true)
+    ["is_shared_login"]=>
+    bool(false)
+    ["is_verified"]=>
+    bool(false)
+    ["last_name"]=>
+    string(5) "Dicou"
+    ["link"]=>
+    string(60) "https://www.facebook.com/app_scoped_user_id/802701816528628/"
+    ["locale"]=>
+    string(5) "nl_NL"
+    ["name_format"]=>
+    string(14) "{first} {last}"
+    ["payment_pricepoints"]=>
+    object(Facebook\GraphNodes\GraphNode)#60 (1) {
+      ["items":protected]=>
+      array(1) {
+        ["mobile"]=>
+        object(Facebook\GraphNodes\GraphNode)#59 (1) {
+          ["items":protected]=>
+          array(12) {
+            [0]=>
+            object(Facebook\GraphNodes\GraphNode)#47 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(10)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(4) "1.50"
+              }
+            }
+            [1]=>
+            object(Facebook\GraphNodes\GraphNode)#48 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(14)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(4) "2.00"
+              }
+            }
+            [2]=>
+            object(Facebook\GraphNodes\GraphNode)#49 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(18)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(4) "2.50"
+              }
+            }
+            [3]=>
+            object(Facebook\GraphNodes\GraphNode)#50 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(21)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(4) "3.00"
+              }
+            }
+            [4]=>
+            object(Facebook\GraphNodes\GraphNode)#51 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(25)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(4) "3.50"
+              }
+            }
+            [5]=>
+            object(Facebook\GraphNodes\GraphNode)#52 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(29)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(4) "4.00"
+              }
+            }
+            [6]=>
+            object(Facebook\GraphNodes\GraphNode)#53 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(33)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(4) "4.50"
+              }
+            }
+            [7]=>
+            object(Facebook\GraphNodes\GraphNode)#54 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(36)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(4) "5.00"
+              }
+            }
+            [8]=>
+            object(Facebook\GraphNodes\GraphNode)#55 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(44)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(4) "6.00"
+              }
+            }
+            [9]=>
+            object(Facebook\GraphNodes\GraphNode)#56 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(51)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(4) "7.00"
+              }
+            }
+            [10]=>
+            object(Facebook\GraphNodes\GraphNode)#57 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(59)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(4) "8.00"
+              }
+            }
+            [11]=>
+            object(Facebook\GraphNodes\GraphNode)#58 (1) {
+              ["items":protected]=>
+              array(3) {
+                ["credits"]=>
+                int(113)
+                ["local_currency"]=>
+                string(3) "EUR"
+                ["user_price"]=>
+                string(5) "15.00"
+              }
+            }
+          }
+        }
+      }
+    }
+    ["security_settings"]=>
+    object(Facebook\GraphNodes\GraphNode)#62 (1) {
+      ["items":protected]=>
+      array(1) {
+        ["secure_browsing"]=>
+        object(Facebook\GraphNodes\GraphNode)#61 (1) {
+          ["items":protected]=>
+          array(1) {
+            ["enabled"]=>
+            bool(true)
+          }
+        }
+      }
+    }
+    ["test_group"]=>
+    int(8)
+    ["third_party_id"]=>
+    string(27) "BuKNhcEQM8bcGkdCmPOPzTp1eXE"
+    ["timezone"]=>
+    int(-7)
+    ["updated_time"]=>
+    object(DateTime)#80 (3) {
+      ["date"]=>
+      string(26) "2015-11-12 09:00:04.000000"
+      ["timezone_type"]=>
+      int(1)
+      ["timezone"]=>
+      string(6) "+00:00"
+    }
+    ["verified"]=>
+    bool(true)
+    ["video_upload_limits"]=>
+    object(Facebook\GraphNodes\GraphNode)#63 (1) {
+      ["items":protected]=>
+      array(2) {
+        ["length"]=>
+        int(7200)
+        ["size"]=>
+        int(4294967296)
+      }
+    }
+    ["viewer_can_send_gift"]=>
+    bool(false)
+    ["__debug__"]=>
+    object(Facebook\GraphNodes\GraphNode)#78 (1) {
+      ["items":protected]=>
+      array(1) {
+        ["messages"]=>
+        object(Facebook\GraphNodes\GraphNode)#77 (1) {
+          ["items":protected]=>
+          array(13) {
+            [0]=>
+            object(Facebook\GraphNodes\GraphNode)#64 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(107) "The field 'bio' is only accessible on the User object after the user grants the 'user_about_me' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [1]=>
+            object(Facebook\GraphNodes\GraphNode)#65 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(112) "The field 'birthday' is only accessible on the User object after the user grants the 'user_birthday' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [2]=>
+            object(Facebook\GraphNodes\GraphNode)#66 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(122) "The field 'education' is only accessible on the User object after the user grants the 'user_education_history' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [3]=>
+            object(Facebook\GraphNodes\GraphNode)#67 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(112) "The field 'hometown' is only accessible on the User object after the user grants the 'user_hometown' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [4]=>
+            object(Facebook\GraphNodes\GraphNode)#68 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(129) "The field 'interested_in' is only accessible on the User object after the user grants the 'user_relationship_details' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [5]=>
+            object(Facebook\GraphNodes\GraphNode)#69 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(112) "The field 'location' is only accessible on the User object after the user grants the 'user_location' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [6]=>
+            object(Facebook\GraphNodes\GraphNode)#70 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(127) "The field 'meeting_for' is only accessible on the User object after the user grants the 'user_relationship_details' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [7]=>
+            object(Facebook\GraphNodes\GraphNode)#71 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(122) "The field 'political' is only accessible on the User object after the user grants the 'user_religion_politics' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [8]=>
+            object(Facebook\GraphNodes\GraphNode)#72 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(128) "The field 'relationship_status' is only accessible on the User object after the user grants the 'user_relationships' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [9]=>
+            object(Facebook\GraphNodes\GraphNode)#73 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(121) "The field 'religion' is only accessible on the User object after the user grants the 'user_religion_politics' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [10]=>
+            object(Facebook\GraphNodes\GraphNode)#74 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(126) "The field 'significant_other' is only accessible on the User object after the user grants the 'user_relationships' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [11]=>
+            object(Facebook\GraphNodes\GraphNode)#75 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(110) "The field 'website' is only accessible on the User object after the user grants the 'user_website' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+            [12]=>
+            object(Facebook\GraphNodes\GraphNode)#76 (1) {
+              ["items":protected]=>
+              array(2) {
+                ["message"]=>
+                string(112) "The field 'work' is only accessible on the User object after the user grants the 'user_work_history' permission."
+                ["type"]=>
+                string(7) "warning"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

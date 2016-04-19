@@ -2,6 +2,15 @@
 
 require('../includes/config.php'); 
 
+$lang = (empty($_GET['lang'])) ? '' : $_GET['lang'];
+
+
+
+
+
+
+
+
 //make sure user is logged in, function will redirect use if not logged in
 login_required();
 
@@ -42,58 +51,33 @@ if(isset($_GET['delpage'])){
 
 <div id="wrapper">
 
-<div id="logo"><a href="<?php echo DIRADMIN;?>"><img src="images/logo.png" alt="<?php echo SITETITLE;?>" border="0" /></a></div>
+
 
 <!-- NAV -->
-<div id="navigation">
-	<ul class="menu">
-		<li><a href="<?php echo DIRADMIN;?>">Admin</a></li>		
-		<li><a href="<?php echo DIR;?>" target="_blank">View Website</a></li>
-		<li><a href="<?php echo DIRADMIN;?>?logout">Logout</a></li>
-	</ul>
-</div>
+
 <!-- END NAV -->
 
 <div id="content">
-
-<?php 
-	//show any messages if there are any.
-	messages();
+<?php  
+switch ($lang) {
+	case 'english':
+			include 'english.php';
+		break;
 	
-?>
+	case 'dutch':
+			include 'dutch.php';
+		break;
 
-<h1>Manage Articels</h1>
-
-<table>
-<tr>
-	<th><strong>Title</strong></th>
-	<th><strong>Action</strong></th>
-</tr>
-
-<?php
-$sql = mysql_query("SELECT * FROM pages ORDER BY pageID");
-while($row = mysql_fetch_object($sql)) 
-{
-	echo "<tr>";
-		echo "<td>$row->pageTitle</td>";
-		if($row->pageID == 9){ //home page hide the delete link
-			echo "<td><a href=\"".DIRADMIN."editpage.php?id=$row->pageID\">Edit</a></td>";
-		} else {
-			echo "<td><a href=\"".DIRADMIN."editpage.php?id=$row->pageID\">Edit</a> | <a href=\"javascript:delpage('$row->pageID','$row->pageTitle');\">Delete</a></td>";
-		}
-		
-	echo "</tr>";
+	default:
+		include 'choose.php';
+	break;
 }
 ?>
-</table>
 
-<p><a href="<?php echo DIRADMIN;?>addpage.php" class="button">Add Page</a></p>
-</div>
 
 <div id="footer">	
 		<div class="copy">&copy; <?php echo SITETITLE.' '. date('Y');?> </div>
 </div><!-- close footer -->
-</div><!-- close wrapper -->
 
 </body>
 </html>

@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
 <body>
 <div id="wrapper">
 
-<div id="logo"><a href="<?php echo DIR;?>"><img src="images/logo.png" alt="<?php echo SITETITLE;?>" title="<?php echo SITETITLE;?>" border="0" /></a></div><!-- close logo -->
+<div id="logo"><a href="<?php echo DIR;?>"><img src="img/logo.png" alt="<?php echo SITETITLE;?>" title="<?php echo SITETITLE;?>" border="0" /></a></div><!-- close logo -->
 
 <!-- NAV -->
 <div id="navigation">
